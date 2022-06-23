@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-    background-color: #3c3030;
+    background-color: #8ecae6;
   }
   
   .material-icons.text-base {
@@ -12,13 +12,13 @@ body {
   }
   
   .bg-secondary {
-    background-color: #3c3030;
+    background-color: #8ecae6;
   }
   
   .bg-gradient {
-    background: linear-gradient(132deg, #FC415A, #591BC5, #212335);
+    background: linear-gradient(132deg, #f5abb5, #9683b8, #6a6b76);
     background-size: 400% 400%;
-    animation: gradient 10s ease infinite;
+    animation: gradient 20s ease infinite;
   }
   
   .cube {
@@ -74,7 +74,7 @@ body {
   
   /* Video.js CSS START */
   .vjs-theme-forest {
-    --vjs-theme-forest--primary: rgb(129,140,248);
+    --vjs-theme-forest--primary: rgb(255, 255, 255);
   }
   
   .vjs-theme-forest.vjs-big-play-button:focus, .vjs-theme-forest:hover .vjs-big-play-button {
