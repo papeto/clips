@@ -1,0 +1,23 @@
+[33mcommit 9d69241b05a5469b818bf6a63ad9d1afb373ff69[m[33m ([m[1;36mHEAD -> [m[1;32mVideoNew[m[33m, [m[1;32mmain[m[33m)[m
+Author: Julian Serrano <jserrano155@unab.edu.co>
+Date:   Thu Jun 23 17:48:35 2022 -0500
+
+     this is another text for the test of commit comand
+
+[33mcommit e9a1fc50ad36534f0e7660449c13b976b2cb11da[m
+Author: Julian Serrano <jserrano155@unab.edu.co>
+Date:   Thu Jun 23 17:41:46 2022 -0500
+
+    The video of dermatology is now update and working
+
+[33mcommit 3479769b7b3b83651d1cafbe23d1735a2953766a[m
+Author: Julian Serrano <jserrano155@unab.edu.co>
+Date:   Thu Jun 23 17:32:30 2022 -0500
+
+    the video now is update whit the dermatology topic
+
+[33mcommit 049e20db9f54ada9ec7be70fa6ffd35dc4c0261f[m[33m ([m[1;31morigin/main[m[33m)[m
+Author: Julian Serrano <jserrano155@unab.edu.co>
+Date:   Sat Jun 18 19:11:28 2022 -0500
+
+    first commit
