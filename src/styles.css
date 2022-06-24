@@ -249,4 +249,12 @@ body {
       opacity: 0;
     }
   }
+
+  /* RESPONSIVE*/
+/* Desde tamaño 0 hasta tamaño 1448px */
+@media (max-width: 1488px) {
+  .center{
+      width: 85%;
+  }
+}
   

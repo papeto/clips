@@ -2,58 +2,50 @@
   <header id="header" class="bg-secondary">
     <nav class="container mx-auto flex justify-start items-center py-8 px-4">
       <!-- App Name -->
-      <a id="AppName" class="text-3xl font-bold mr-4" 
+      <a id="AppName" class="text-3xl font-bold mr-10" 
         routerLink="/">Dra Leydi Mantilla</a>
 
       <div class="flex flex-grow items-center">
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-          <li *ngIf="!(auth.isAuthenticated$ | async); else authLinks">
-            <a class="px-2" href="#" (click)="openModal($event)">Login / Register</a>
-          </li>
           <ng-template #authLinks>
             <li>
               <a class="px-2"routerLink="/manage"
               routerLinkActive="text-indigo-400"
               [routerLinkActiveOptions]="{exact:true}"
               [queryParams]="{ sort: '1' }">
-              Manage</a>
+              Pacientes</a>
             </li>
             <li>
               <a class="px-2" routerLink="/upload"
               routerLinkActive="text-indigo-400"
-              [routerLinkActiveOptions]="{exact:true}">Upload</a>
+              [routerLinkActiveOptions]="{exact:true}">Subir Fotos</a>
             </li>
             <li>
               <a class="px-2" (click)="auth.logout($event)" href="#">
-                Logout
+                Salir
               </a>
             </li>
           </ng-template>
     
-          <li routerLinkActive="text-indigo-400">
-            <a class="px-2" routerLink="/about"
-              routerLinkActive="text-indigo-400">
-            About</a>
+          <li routerLinkActive="text-indigo-600">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="14" fill="currentColor" class="inline-block mb-1 -mr-2" viewBox="0 0 16 16">
+              <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+            </svg>
+            <a class="px-2 h-100" routerLink="/about" routerLinkActive="text-indigo-400">Contactanos</a>
           </li>
+
         </ul>
         <!-- Language Switcher -->
         <ul class="flex flex-row ml-auto">
-          <li>
-            <a href="#">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAAA1CAMAAACA7r40AAAA/FBMVEWyIjNPN2Y8O27///8/PnBOTXxycpY9PG9RUX5HR3dIR3dLSnlPTny4uMpWVYFFRHVwb5VlZIx7e52DgqOIh6aIiKc+PXBJSHhTUn9hYYqyIjReXohgX4lYV4Lr6/C2tcjPdYB0c5haWYRYV4Nra5GJiac+PW/FxdTHYG1RUH3eoajltbtOTXvty89BQHHg3+hSUX6GYoC6usyVlbFycZa7u8yUk6+sq8FCQXO0tMe1tMhiYYpMS3pDQnNvbpTExNN8fJ7GxdTGxtWCgqLHx9WXlrLXi5SYl7Kiobrg4Oiiorrn5u3n5+2jo7ukpLvw8PTx8fX09Pf19firqsC5sMNxAAAAAnRSTlPQ9qN1Xw4AAAGlSURBVHhe7ZXFiiRBFEVjznvp5W7t7j3u7m7//y8D1dAMGbnI4jW5KOpsgjibCxFcrrtVEmcBGAGQJHB98d3EgEM/ygsg/nwRAy15rxQ4Ywh3JQX49hVgKA/Ad1hDkkGTMSQJjGkOEmo133FmwAEQyl8FfSj3gFgkzjsQAw6AZ796AP2fGcDBS8/ZQ7ZQlJ2d+bEFqp6zhuh9Cf9/pDtKkTs04KBTD4jgx3eICOodoshz1p7M6UUAUQ+Ap2Pf2UMI5UBBX18/Ut7ZQ84Jui10QKsbcA7dt77jxIBDt+sxMNzrD4HL+rZS4Iw9iTZkCjRFmsBUHkcUOGMI7dkpKezuQsrprM3zR76zN572ekdBX623gaONJ0d5B5sGHAA1+QTwRQJgX2Q/7+w9GZGlDZKERpoxgkbDc8s0WscGSo+WGMiNVlgwWuFNjdafPsDe7wzg3RvP2UNCFGVtbX6EoOo7PhgoO1rGnswHiquB4mqgfIcxpBTGkNslMf2JVMAShRxXgJtUwBKFbFbAqicL4U4qYNWThXCHFbDqyUK4swpY9WQhXBX8A2rVjaQ6HWXmAAAAAElFTkSuQmCC" 
-                alt="en" width="22" height="14" class="inline-block">
-              <span class="ml-1">English</span>
-            </a>
+          <li *ngIf="!(auth.isAuthenticated$ | async); else authLinks">
+            <a class="px-2" href="#" (click)="openModal($event)">Ingresar / Registrarse</a>
           </li>
-          <li style="display: none;">
-            <a href="#">
-              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABDBAMAAACYZb3pAAAAHlBMVEUpQqK2q8384OL3qa/tKTkAI5Wrt9z////5t7ztKTlzpJCAAAAABXRSTlP++vjs1BQWlgsAAAAxSURBVHgBYmRAA4yKaAJCAugqQgHtyzENAAAAAiD7pzaDr4MfRVEURVGU36IoipK5FLWNJ6UFusbWAAAAAElFTkSuQmCC" 
-                alt="fr" width="22" height="14" class="inline-block">
-                <span class="ml-1">French</span>
-            </a>
-          </li>
+          <!--Ingresar mas datos en la parte superior derecha de la pantalla-->
+
+
+
         </ul>
       </div>
     </nav>
